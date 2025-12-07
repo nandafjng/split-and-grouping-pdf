@@ -1,4 +1,4 @@
-# 📦 Packing Tool - Invoice Splitter & Grouping System
+# 📦 Splitter and Grouping Tool - Invoice Splitter & Grouping System
 
 > **Automatic invoice splitting and box grouping tool for e-commerce warehouse operations**
 
@@ -6,7 +6,7 @@ Transform your messy multi-order invoices into organized, picker-friendly groupe
 
 ---
 
-## 🌟 What is Packing Tool?
+## 🌟 What is Splitter and Grouping Tool?
 
 Packing Tool adalah sistem otomatis yang memisahkan invoice besar (berisi puluhan/ratusan order) menjadi file PDF terpisah per order, lalu mengelompokkannya berdasarkan ukuran kardus dan mengurutkannya berdasarkan SKU family untuk mempermudah proses picking di gudang.
 
