@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitting Tool - Hybrid Invoice</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Splitting Tool<span class="platform-badge">HYBRID</span></h1>
+        <p class="subtitle">Upload 1 PDF berisi invoice TikTok & Shopee untuk split & grouping otomatis</p>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📄</div>
+            <div class="upload-text">Klik atau drag & drop PDF di sini</div>
+            <div class="upload-hint">Tool akan auto-detect platform dan group per kardus</div>
+            <input type="file" id="fileInput" accept=".pdf">
+        </div>
+
+        <div style="text-align: center;">
+            <button class="btn" id="processBtn" disabled>🚀 Proses Splitting</button>
+        </div>
+
+        <div class="progress-section" id="progressSection">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">0%</div>
+            </div>
+            <div class="status-text" id="statusText">Memproses...</div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="results-section" id="resultsSection">
+            <div class="success-message">
+                <div class="success-icon">✅</div>
+                <h3>Split Selesai!</h3>
+            </div>
+
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalOrders">0</div>
+                    <div class="stat-label">Total Orders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalBoxes">0</div>
+                    <div class="stat-label">Total Kardus</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalItems">0</div>
+                    <div class="stat-label">Total Items</div>
+                </div>
+            </div>
+
+            <div class="platform-breakdown">
+                <div class="platform-stat">
+                    <div class="platform-stat-number" style="color: #667eea;" id="tiktokOrders">0</div>
+                    <div class="platform-stat-label">🔵 TikTok Orders</div>
+                </div>
+                <div class="platform-stat">
+                    <div class="platform-stat-number" style="color: #FF6A00;" id="shopeeOrders">0</div>
+                    <div class="platform-stat-label">🟠 Shopee Orders</div>
+                </div>
+            </div>
+
+            <div id="boxGroups"></div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <button class="btn" onclick="downloadAllPDF()">📥 Download Semua Kardus (PDF Terpisah)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
