@@ -913,7 +913,7 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
-
+        
         function showResults(boxGroups, orders) {
             const resultsSection = document.getElementById('resultsSection');
             const boxGroupsDiv = document.getElementById('boxGroups');
@@ -980,10 +980,25 @@
                     div.innerHTML = `
                         <div class="order-info">
                             <div class="order-id">
-                                ${order.orderId}
-                                <span class="platform-tag">Merchant</span>
-                                ${order.hasUnknown ? '<span class="unknown-badge">UNKNOWN</span>' : ''}
+                                Order #${order.orderId}
+                                <span class="platform-tag">
+                                    Merchant
+                                </span>
+
+                                <span style="
+                                    background:#e3f2fd;
+                                    color:#1976d2;
+                                    padding:2px 8px;
+                                    border-radius:4px;
+                                    font-size:11px;
+                                    margin-left:8px;
+                                    display:inline-block;
+                                ">
+                                    ${getSkuPrefix(order.items[0].sku)}
+                                </span>
                             </div>
+
+
                             <div class="order-details">${itemList}</div>
                         </div>
 
@@ -1017,6 +1032,16 @@
             fill.style.width = percent + '%';
             fill.textContent = percent + '%';
             status.textContent = text;
+        }
+        function getPlatformClass(platform) {
+            if (!platform) return "";
+            platform = platform.toLowerCase();
+
+            if (platform.includes("shopee")) return "shopee";
+            if (platform.includes("tiktok")) return "tiktok";
+            if (platform.includes("tokopedia")) return "tokopedia";
+
+            return "other";
         }
 
         function showError(msg) {
