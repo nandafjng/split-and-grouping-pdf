@@ -226,11 +226,10 @@ const SKU_DB = {
     
     // U
     'UNIX003': 8,      // Unisex Perfume Set ONE AQUA BLUE
-};
 
     // W
     'WASH001': 4,           //Lume wash assistant
-
+};
 // ========== Global Variables ==========
 let selectedFile = null;
 let processedOrders = [];
