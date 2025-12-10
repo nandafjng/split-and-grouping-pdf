@@ -3,79 +3,218 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 
 // ========== SKU Database ==========
 const SKU_DB = {
+
+    // Angka
+    '3IN1BHF': 10,           //Lume face Hair bodyset
+    '3IN1SHB': 10,           //LUME PAKET 3 IN 1 SHAMPOO HAIR MASK SHOWER OIL LUMECOLORS
+    '5IN1CHB': 16,           //LUME COMPLETE HAIR BODY SET
+    '5IN1EO': 12,           //Perfect Complexion - Exotis
+    '5IN1KL': 12,           //Perfect Complexion - Kuning Langsat
+    '5IN1LT': 12,           //Perfect Complexion - Langsat Terang
+    '5IN1PO': 12,           //Perfect Complexion - Putih Oriental
+    '5IN1SM': 12,           //Warna Kulit Sawo Matang
+    '5IN1SW': 12,           //Perfect Complexion - Sawo Matang
+
+
     // A
-    'ACCGS01': 1.5,    // Lume Guasha Massage Tool
-    'ACSRS01': 4,      // Scalp Massager
-    'ACSRS02': 1,      // Detangler Brush
-    'ACN01': 1.5,      // Acne Spot Treatment
-    'AMD001': 10,      // Amande Perfume 60mL
+    'ACEFC01': 8,           //ACNE FACIAL REGULER
+    'ACEFC02': 5,           //Acne + Facial Cleanser Travel
+    'ACEM01': 6,           //ACNE + MOISTURIZER 30 GR
+    'ACEM02': 4,           //ACNE + MOISTURIZER 8,5 GR
+    'ACESR01': 4,           //ACNE + SERUM 35 ML
+    'ACESR02': 4,           //ACNE + SERUM 10 ML
+    'ACETR01': 4,           //ACNE + ESSENCE 80 ML
+    'ACETR02': 4,           //ACNE + ESSENCE 33,5 ML
+    'ACN01': 1,           //Acne Spot 10 gr
+    'ACSRS01': 6,           //Scalp Massager Gold
+    'ACSRS02': 6,           //Untangled Brush Pink
+    'ACSRS03': 1,           //Facial Brush Pink
+
+
     
     // B
-    'BAHB03': 12,      // Bundling Amande Body Serum Kecil
-    'BBLUME': 3,       // Beauty Blender
-    'BDAMUN': 14,      // Body Amande Bundle (large)
-    'BDFBKL': 5,       // Flawless Base Duo Bundle - Kuning Langsat
-    'BDFBSM': 5,       // Flawless Base Duo Bundle - Shea Butter
-    'BDPBKL': 6,       // Body Perfect Bundle - Kuning Langsat
-    'BDPBLT': 6,       // Body Perfect Bundle - Lavender Tea
-    'BDPBPO': 6,       // Body Perfect Bundle - Papaya Oat
-    'BDSGSM': 5,       // LUMECOLORS BUNDLING SMOOTH
-    'BDSGPO': 5,       // LUMECOLORS BUNDLING SMOOTH - Putih Oriental
-    'BDYOIL01': 4,     // Body Oil 150ml
-    'BDYOIL02': 6,     // Body Oil 300ml
-    'BDYSR01': 4,      // Body Serum 150ml
-    'BDYSR02': 6,      // Body Serum 300ml
-    'BRM001': 1.5,     // Browmate 4-in-1
+    'BACFB01': 8,           //FACIAL CLEANSER REGULAR + BRUSH PINK
+    'BACFB02': 5,           //Facial Clanser Travel + Facial Brush Pink
+    'BACMB01': 8,           //HAIR MASK 300 GR + UNTANGLED BRUSH
+    'BACMB02': 6,           //HAIR MASK 150 GR + UNTANGLED BRUSH
+    'BACSS01': 10,           //SHAMPOO 320 ML + SCALP MASSAGER GOLD
+    'BACSS02': 8,           //SHAMPOO 150 ML + SCALP MASSAGER GOLD
+    'BACTG01': 6,           //ESSENCE TONER 80 ML + GUASHA
+    'BACTG02': 5,           //ESSENCE TONER 33,5 ML + GUASHA
+    'BAHB00': 14,           //Bundling Amande Hair and Body
+    'BAHB01': 14,           //Lume Bundling 2in1 Amande + Shampoo 150ml
+    'BAHB02': 14,           //Lume Bundling 2in1 Amande + Body Wash 150ml
+    'BAHB03': 14,           //Lume Bundling 2in1 Amande + Body Serum 150gr
+    'BAHB04': 14,           //Lume Bundling 2in1 Amande + Hair Mask 150gr
+    'BAHB05': 18,           //Lume Bundling 3in1 Amande + Shampoo 150ml + Hair Mask 150gr
+    'BBLUME': 3,           //Beauty Blender
+    'BDAMUN': 20,           //AMANDE + UNISEX
+    'BDFBEXO': 7,           //FLAWLESS BASE DUO EXOTIC
+    'BDFBKL': 7,           //FLAWLESS BASE DUO KUNING LANGSAT
+    'BDFBLT': 7,           //FLAWLESS BASE DUO LANGSAT TERANG
+    'BDFBPO': 7,           //FLAWLESS BASE DUO PUTIH ORIENTAL
+    'BDFBSM': 7,           //FLAWLESS BASE DUO SAWO MATANG
+    'BDPBEXO': 8,           //PERFECT BASE EXOTIC
+    'BDPBKL': 8,           //PERFECT BASE KUNING LANGSAT
+    'BDPBLT': 8,           //PERFECT BASE LANGSAT TERANG
+    'BDPBPO': 8,           //PERFECT BASE PUTIH ORIENTAL
+    'BDPBSM': 8,           //PERFECT BASE SAWO MATANG
+    'BDPCEXO': 8,           //PERFECT COMPLEXION DUO EXOTIC
+    'BDPCKL': 8,           //PERFECT COMPLEXION DUO KUNING LANGSAT NEW
+    'BDPCLT': 8,           //PERFECT COMPLEXION DUO LANGSAT TERANG NEW
+    'BDPCPO': 8,           //PERFECT COMPLEXION DUO PUTIH ORIENTAL NEW
+    'BDPCSM': 8,           //PERFECT COMPLEXION DUO SAWO MATANG NEW
+    'BDSGDE': 8,           //SMOOTH GLOW KIT DUO EXOTIC
+    'BDSGKL': 8,           //SMOOTH GLOW KIT DUO KUNING LANGSAT
+    'BDSGLT': 8,           //SMOOTH GLOW KIT DUO LANGSAT TERANG
+    'BDSGPO': 8,           //SMOOTH GLOW KIT DUO PUTIH ORIENTAL
+    'BDSGSM': 8,           //SMOOTH GLOW KIT DUO SAWO MATANG
+    'BDYOIL01': 4,           //Body Wash 150 mL
+    'BDYOIL02': 6,           //Body Wash 320 mL
+    'BDYSR01': 4,           //Body Serum 150 mL
+    'BDYSR02': 6,           //Body Serum 300 gr
+    'BLCM23': 4,           //Bundling lipcoat dan lipmouse - isi 4
+    'BPBEO': 8,           //Perpect base Exotis
+    'BPBKL': 8,           //Perpect base Kuning Langsat
+    'BPBLT': 8,           //Perpect base Langsat terang
+    'BPBPO': 8,           //Perpect base Putih Oriental
+    'BPBSW': 8,           //Perpect base Sawo matang
+    'BRB1SET': 8,           //LUME Basic repair barrier set
+    'BRM001': 3,           //BROWMATE
+    'BUNDPALE2': 8,           //PAKET PALETTE+EYECONIC 02
+    'BUNDPALE3': 8,           //PAKET PALETTE+EYECONIC 03
+
+
     
     // C
-    'CSHN001': 3,      // Cushion Light
-    'CSHN002': 3,      // Cushion Neutral
-    'CSHN003': 3,      // Cushion Sand
-    'CWD000': 1.5,     // Compact Powder Fair
-    'CWD001': 1.5,     // Compact Powder Light
-    'CWD002': 1.5,     // Compact Powder Neutral
-    'CWD003': 1.5,     // Compact Powder Sand
-    
+    'CDLIGHT': 7,           //Charming Duo Light
+    'CDNEUTRAL': 7,           //Charming Duo Neutral
+    'CDSAND': 7,           //Charming Duo Sand
+    'CSHN001': 3,           //LUMECOLORS Perfect Blur Cushion - LIGHT
+    'CSHN002': 3,           //LUMECOLORS Perfect Blur Cushion - NEUTRAL
+    'CSHN003': 3,           //LUMECOLORS Perfect Blur Cushion - SAND
+    'CWD000': 1.5,           //CP - Fair
+    'CWD001': 1.5,           //CP - Light
+    'CWD002': 1.5,           //CP - Neutral
+    'CWD003': 1.5,           //CP - Sand
+
+
+    // D
+    'DNPL01': 8,           //Day & Night Pallete
+
     // E
-    'ECLUME2': 4,      // Eyeconic Duo Pencil
-    'EDLP03': 4,       // PAKET LOOSE POWDER + EYECONIC G.TAN+ASPHALTGREY
+    'ECLUME1': 2,           //Eyeconic - Ashbrown
+    'ECLUME2': 2,           //Eyeconic - Asphaltgrey
+    'ECLUME3': 2,           //Eyeconic - Espresso
+    'EDCW00': 6,           //PAKET COMPACT+EYECONIC 00
+    'EDCW01': 6,           //PAKET COMPACT+EYECONIC 01
+    'EDCW02': 6,           //PAKET COMPACT+EYECONIC 02
+    'EDCW03': 6,           //PAKET COMPACT+EYECONIC 03
+    'EDFD01': 6,           //PAKET FD BOTOL+EYECONIC 01
+    'EDFD02': 6,           //PAKET FD BOTOL+EYECONIC 02
+    'EDFD03': 6,           //PAKET FD BOTOL+EYECONIC 03
+    'EDFS01': 4,           //PAKET FD SACHET+EYECONIC 01
+    'EDFS02': 4,           //PAKET FD SACHET+EYECONIC 02
+    'EDFS03': 4,           //PAKET FD SACHET+EYECONIC 03
+    'EDLP00': 5,           //PAKET LOSPOW+EYECONIC 00
+    'EDLP01': 5,           //PAKET LOSPOW+EYECONIC 01
+    'EDLP02': 5,           //PAKET LOSPOW+EYECONIC 02
+    'EDLP03': 5,           //PAKET LOSPOW+EYECONIC 03
+
+
     
     // F
-    'FCRP01': 3.3,     // Face Cream Palette 1
-    'FCRP02': 3.3,     // Face Cream Palette 2
-    'FCRP03': 3.3,     // Face Cream Palette 3
-    'FCRP05': 6,       // Face Cream Palette 1+3
-    'FCRP06': 6,       // Face Cream Palette 2+3
-    'FCRP07': 9,       // Face Cream Pallete 1+2+3
-    'FOND01': 3,       // Foundation Sand 30ml
-    'FOND02': 3,       // Foundation Light 30ml
-    'FOND03': 3,       // Foundation Neutral 30ml
-    
+    'FALS001': 10,           //Falscara Starter Kit
+    'FALS002': 5,           //Falscara OVERNIGHTER
+    'FALS003': 5,           //Falscara BOND & SEAL
+    'FALS004': 5,           //Falscara REMOVER
+    'FALSW01': 5,           //Falscara Lengthening
+    'FALSW02': 5,           //Falscara Natural Wispy
+    'FALSW03': 5,           //Falscara Bambi Wisps
+    'FALSW04': 5,           //Falscara D-LASH LIFTING EFFECT
+    'FALSW05': 5,           //Falscara L - Curl Type
+    'FCRP01': 3.3,           //Face Cream Pallete 01
+    'FCRP02': 3.3,           //Face Cream Pallete 02
+    'FCRP03': 3.3,           //Face Cream Pallete 03
+    'FCRP04': 6.5,           //Bundling FCP01 + FCP02
+    'FCRP05': 6.5,           //Bundling FCP01 + FCP03
+    'FCRP06': 6.5,           //Bundling FCP02 + FCP03
+    'FCRP07': 10,           //Bundling FCP01 + FCP02 + FCP03
+    'FEMI002': 10,           //LUME FEMININE SCENTS DUET - SET 2
+    'FOND01': 3,           //FD - Sand
+    'FOND02': 3,           //FD - Light
+    'FOND03': 3,           //FD - Neutral
+    'FONDSC01': 1.5,           //FD Sachet - Sand
+    'FONDSC02': 1.5,           //FD Sachet - Light
+    'FONDSC03': 1.5,           //FD Sachet - Neutral
+    'FREST10': 10,           //FRESTIO
+    'FREST11': 20,           //BUNDLING FRESTIO 2 BOX
+    'FRSTL01': 10,           //Parfum Frestilo
+    'FSUP01': 20,           //BUNDLING PARFUM 5 SETS
+
     // H
-    'HAIRMSK01': 4,    // Hair Mask 150ml
-    'HAIRMSK02': 6,    // Hair Mask 320ml
-    'HAIRSO01': 4,     // Hair Therapy Shampoo 150ml
-    'HAIRSO02': 6,     // Hair Therapy Shampoo 320ml
+    'HAIRMSK01': 4,           //Hair Mask 150 mL
+    'HAIRMSK02': 6,           //Hair Mask 300 gr
+    'HAIRSO01': 4,           //Shampoo 150 mL
+    'HAIRSO02': 6,           //Shampoo 320 mL
+    'HAIRSR01': 4,           //Hair Serum 150 mL
 
     // K
-    'K31EC0B9': 1,     // Lipcoat Bare With Me
-    'K31EF089': 1,     // Lipcoat Pumpkin Pie
-    
+    'K31EC0B7': 1,           //LC - Kiss of fire
+    'K31EC0B8': 1,           //LC - Chocolate Trip
+    'K31EC0B9': 1,           //LC - Bare With Me
+    'K31EC0BA': 1,           //LC - Sunset Chic
+    'K31EC0BB': 1,           //LC - Arm Candy
+    'K31EF084': 1,           //LM - Sugar Babe
+    'K31EF085': 1,           //LM - Be My Boo
+    'K31EF086': 1,           //LM - Vixen Glam
+    'K31EF087': 1,           //LM - Crimson Red
+    'K31EF088': 1,           //LM - Spicy Coral
+    'K31EF089': 1,           //LM - Pumkin Pie
+    'K31EF08A': 1,           //LM - Sunset Kiss
+    'K31EF08B': 1,           //LM - Peach Me
+    'K31EF08C': 1,           //LM - My Bae
+    'K31EF08D': 1,           //LM - Marshmellow
+    'K3203B86': 1,           //LC - Coralline
+    'K3203B87': 1,           //LC - Deviouse Queen
+    'K3203B88': 1,           //LC - Memory Of You
+    'K3203B89': 1,           //LC - Summer Potion
+    'K3203B8A': 1,           //LC - Sunday Bliss
+        
     // L
-    'LOOSE00': 3,      // Loose Powder Light
-    'LOOSE01': 3,      // Loose Powder Light Neutral
-    'LOOSE02': 3,      // Loose Powder Medium Neutral
-    'LOOSE03': 3,      // Loose Powder Golden Tan
-    'LS0001': 1,       // Velvet Creme Lipstick Nude01
-    'LS0002': 1,       // Velvet Creme Lipstick Nude02
-    'LTINT01': 1,      // Ultralight Liptint Stormy
-    'LTINT02': 1,      // Ultralight Liptint Innocent
-    'LTINT03': 1,      // Ultralight Liptint Lovely
-    'LTINT04': 1,      // Ultralight Liptint All Variant
+    'LIPSET01': 10,           //BUNDLING BROWLIPSET NUDE 1
+    'LIPSET02': 10,           //BUNDLING BROWLIPSET NUDE 2
+    'LIPSET03': 10,           //BUNDLING BROWLIPSET NUDE 3
+    'LOOSE00': 3,           //LP - Light
+    'LOOSE01': 3,           //LP - Light Neutral
+    'LOOSE02': 3,           //LP - Medium Neutral
+    'LOOSE03': 3,           //LP Golden Tan
+    'LS0001': 1,           //VELVET CREME LIPSTICK NUDE 01
+    'LS0002': 1,           //VELVET CREME LIPSTICK NUDE 02
+    'LS0003': 1,           //VELVET CREME LIPSTICK NUDE 03
+    'LS0004': 3,           //BUNDLING LIPSTIK NUDE ALL SHADE
+    'LTINT01': 1,           //ULTRALIGHT LIPTINT STORMY
+    'LTINT02': 1,           //ULTRALIGHT LIPTINT INNOCENT
+    'LTINT03': 1,           //ULTRALIGHT LIPTINT LOVELY
+    'LTINT04': 3,           //3 LIPTINT ALL VARIAN
+
+
     
     // P
-    'PAL000': 5,       // Palette (various)
-    'PRF01': 12,       // Perfume 3-Set Eau de Parfum
+    'PAL000': 8,           //Day & Night Pallete (Tanpa Brush)
+    'PDAEO': 6,           //Double action Exotis
+    'PDAKL': 6,           //Paket Double - kuning langsat
+    'PDALT': 6,           //Double action Langsat terang
+    'PDAPO': 6,           //Paket Double - Putih Oriental
+    'PDASW': 6,           //Double action sawo matang
+    'PRF01': 12,           //LUME PARFUM 3 SET 30 ml
+    'PSBKL': 6,           //Simple base Kuning langsat
+    'PSBLT': 6,           //Paket Simple Base - Langsat Terang
+    'PSBPO': 6,           //Paket Simple Base - Putih Oriental
+    'PSBSW': 6,           //Simple base sawo matang
+
+    // R
+    'RSS3T': 10,           //RADIANT STARTERB SET
     
     // S
     'SRFC01': 3,       // Nourishing Facial Cleanser 30ml
@@ -88,6 +227,9 @@ const SKU_DB = {
     // U
     'UNIX003': 8,      // Unisex Perfume Set ONE AQUA BLUE
 };
+
+    // W
+    'WASH001': ,           //Lume wash assistant
 
 // ========== Global Variables ==========
 let selectedFile = null;
