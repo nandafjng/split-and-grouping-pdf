@@ -229,7 +229,7 @@ const SKU_DB = {
 };
 
     // W
-    'WASH001': ,           //Lume wash assistant
+    'WASH001': 4,           //Lume wash assistant
 
 // ========== Global Variables ==========
 let selectedFile = null;
