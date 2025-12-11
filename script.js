@@ -17,6 +17,7 @@ const SKU_DB = {
 
 
     // A
+    'ACCGS01': 1.5,         //Lume Guasha Massage Tool
     'ACEFC01': 8,           //ACNE FACIAL REGULER
     'ACEFC02': 5,           //Acne + Facial Cleanser Travel
     'ACEM01': 6,           //ACNE + MOISTURIZER 30 GR
