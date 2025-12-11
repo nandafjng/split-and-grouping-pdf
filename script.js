@@ -29,6 +29,7 @@ const SKU_DB = {
     'ACSRS01': 6,           //Scalp Massager Gold
     'ACSRS02': 6,           //Untangled Brush Pink
     'ACSRS03': 1,           //Facial Brush Pink
+    'AMD001' : 10,         //Parfum Amande
 
 
     
